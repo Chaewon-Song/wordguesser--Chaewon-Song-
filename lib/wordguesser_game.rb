@@ -8,6 +8,10 @@ class WordGuesserGame
     @word = word
   end
 
+  def word
+    @word
+  end
+
   # You can test it by installing irb via $ gem install irb
   # and then running $ irb -I. -r app.rb
   # And then in the irb: irb(main):001:0> WordGuesserGame.get_random_word
