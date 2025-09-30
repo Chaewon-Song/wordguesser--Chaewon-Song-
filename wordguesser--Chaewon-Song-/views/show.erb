@@ -1,0 +1,22 @@
+<h2>Word Guesser</h2>
+
+<% if @message %>
+  <p style="color:red"><%= @message %></p>
+<% end %>
+
+<p>
+  Word: <%= @game.word_with_guesses %>
+</p>
+
+<p>
+  Wrong guesses: <%= @game.wrong_guesses %>
+</p>
+
+<form action="/guess" method="post">
+  <input type="text" name="guess" maxlength="1">
+  <input type="submit" value="Guess!">
+</form>
+
+<form action="/new" method="post">
+  <input type="submit" value="New Game">
+</form>
